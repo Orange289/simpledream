@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang='ru'>
+	<head>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' href='css/style.css'>
+		<title>SimpleDream-Test</title>
+	</head>
+	<body class='page-body'>
+		<div class='wrapper'>
+			<header class='page-header'>
+				<button class='page-header__btn page-header__btn--open' type='button' title='открыть'></button>
+				<img src='img/img-logo.png' width='62' height='52' alt='logo'>
+				<a class='page-header__icon page-header__icon--bell' href='#'></a>
+				<a class='page-header__icon page-header__icon--basket' href='#'></a>
+				<a class='page-header__login' href='#'></a>
+				<nav class='main-nav'>
+					<ul class='main-nav__list'>
+						<li class='main-nav__item'><a href='#'>Пункт меню один</a></li>
+						<li class='main-nav__item'><a href='#'>Пункт меню два</a></li>
+						<li class='main-nav__item'><a href='#'>Пункт меню три</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main class='page-main'>
+				<section class='filter'>
+					<h1>Избранное (9)</h1>
+					<label class='filter__search'>
+						Поиск:
+						<input class='page-input' type='search' placeholder='Введите название сорта, вкус'>
+					</label>
+					<div class='filter__sort'>
+						<span>по названию</span>
+						<a class='filter__type filter__type--price' href='#'>по цене</a>
+						<a class='filter__type filter__type--rating' href='#'>по оценке</a>
+					</div>
+					<div class='filter__view tabs'>
+						<input type='radio' name='view' id='tab-first'>
+						<label for='tab-first' class='filter__view-option tabs__option'>Сокращенный вид</label>
+						<input type='radio' id='tab-second' name='view' checked>
+						<label for='tab-second' class='filter__view-option tabs__option'>Подробный вид</label>
+						<div class='products products--short'></div>
+						<div class='products products--details'>
+							<div class='products__item products__item--special'>
+								<div class='products__header' id='special'>
+									<b>Специальные предложения</b>
+									<span class='products__number'>(45)</span>
+								</div>
+								<div class='products__content' id='special-content'>
+									<div class='container'>
+									</div>
+								</div>
+							</div>
+							<div class='products__item products__item--arabica'>
+								<div class='products__header' id='arabica'>
+									<b>Арабика</b>
+									<span class='products__number'>(45)</span>
+								</div>
+								<div class='products__content' id='arabica-content'>
+									<div class='container'>
+										<div class='products__goods products__goods--1'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+											<div class='products__discount'>
+												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
+											</div>
+											<div class='products__howmuch'>
+												<a class='products__btn products__btn--minus'>-</a>
+												<input type='text' value='0' id='products-quantity-1'>
+												<a class='products__btn products__btn--plus'>+</a>
+											</div>
+										</div>
+										<div class='products__goods products__goods--2'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+											<div class='products__discount'>
+												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
+											</div>
+											<div class='products__howmuch'>
+												<a class='products__btn products__btn--minus'>-</a>
+												<input type='text' value='0' id='products-quantity-2'>
+												<a class='products__btn products__btn--plus'>+</a>
+											</div>
+										</div>
+										<div class='products__goods products__goods--3'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+											<div class='products__discount'>
+												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
+											</div>
+											<div class='products__howmuch'>
+												<a class='products__btn products__btn--minus'>-</a>
+												<input type='text' value='0' id='products-quantity-3'>
+												<a class='products__btn products__btn--plus'>+</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='products__item products__item--robusta'>
+								<div class='products__header' id='robusta'>
+									<b>Робуст</b>
+									<span class='products__number'>(45)</span>
+								</div>
+								<div class='products__content' id='robusta-content'>
+									<div class='container'>
+									</div>
+								</div>
+							</div>
+							<div class='products__item products__item--expected'>
+								<div class='products__header' id='expected'>
+									<b>Смеси</b>
+									<span class='products__number'>(45)</span>
+								</div>
+								<div class='products__content' id='expected-content'>
+									<div class='container'>
+										<div class='products__goods products__goods--4'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+										</div>
+										<div class='products__goods products__goods--5'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+										</div>
+										<div class='products__goods products__goods--6'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='products__item products__item--unavailable'>
+								<div class='products__header' id='unavailable'>
+									<b>Нет в наличии</b>
+									<span class='products__number'>(45)</span>
+								</div>
+								<div class='products__content' id='unavailable-content'>
+									<div class='container'>
+										<div class='products__goods products__goods--7'>
+											<div class='products__title'>
+												<a class='products__name' href='#'>BojiKenya Natural AA/AB Highlands Endebess Estate</a>
+												<span class='products__num'></span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class='products__basket' href='#'></a>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
