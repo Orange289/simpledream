@@ -1,3 +1,48 @@
 .products {
 	display: none;
+	margin-top: 9px;
+}
+
+.products__header {
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 15px;
+	border-bottom: 1px solid #c3c3c3;
+	cursor: pointer;
+
+	b {
+		.font-param(18px, 20px, 400);
+	}
+
+}
+
+.products__number {
+	.font-param(12px, 20px, 400, #9c9c9c);
+}
+
+.products__goods {
+	padding: 10px 8px;
+}
+
+.products__title {
+	position: relative;
+}
+
+.products__name {
+	color: #000000;
+	display: inline-block;
+	width: 226px;
+
+	span {
+		border-bottom: 1px dashed #000000;
+	}
+
+}
+
+.products__num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	.size(22px, 25px);
+
 }

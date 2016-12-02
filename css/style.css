@@ -43,6 +43,7 @@
   font-weight: 400;
   color: #000000;
   margin: 0;
+  padding-left: 15px;
 }
 .wrapper {
   width: 320px;
@@ -54,6 +55,9 @@
 .container {
   width: 309px;
   margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 1px #d6d6d6;
 }
 .page-header {
   background-color: #fcfcfc;
@@ -170,11 +174,11 @@
 }
 .filter {
   background-color: #f9f9f9;
-  padding-left: 15px;
   padding-top: 19px;
 }
 .filter__search {
   margin-top: 18px;
+  padding-left: 15px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
@@ -185,12 +189,13 @@
 .filter__sort {
   position: relative;
   margin-top: 8px;
+  padding-left: 15px;
 }
 .filter__sort::after {
   content: '';
   position: absolute;
   top: 8px;
-  left: 87px;
+  left: 102px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -231,7 +236,7 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 130px;
+  left: 150px;
   width: 44px;
   height: 20px;
   background-color: #ffffff;
@@ -251,17 +256,20 @@
   display: none;
 }
 .tabs__radio--1 {
-  left: 123px;
+  left: 143px;
 }
 .tabs__radio--2 {
-  left: 158px;
+  left: 178px;
 }
 .tabs__option {
   cursor: pointer;
   display: inline-block;
 }
+.tabs__option--short {
+  margin-left: 10px;
+}
 .tabs__option--long {
-  margin-left: 60px;
+  margin-left: 70px;
 }
 .tabs__option:hover {
   color: #57c33f;
@@ -274,4 +282,45 @@
 }
 .products {
   display: none;
+  margin-top: 9px;
+}
+.products__header {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  border-bottom: 1px solid #c3c3c3;
+  cursor: pointer;
+}
+.products__header b {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+.products__number {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #9c9c9c;
+}
+.products__goods {
+  padding: 10px 8px;
+}
+.products__title {
+  position: relative;
+}
+.products__name {
+  color: #000000;
+  display: inline-block;
+  width: 226px;
+}
+.products__name span {
+  border-bottom: 1px dashed #000000;
+}
+.products__num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 25px;
 }
