@@ -9,10 +9,12 @@
 		<div class='wrapper'>
 			<header class='page-header'>
 				<button class='page-header__btn page-header__btn--open' type='button' title='открыть'></button>
-				<img src='img/img-logo.png' width='62' height='52' alt='logo'>
-				<a class='page-header__icon page-header__icon--bell' href='#'></a>
-				<a class='page-header__icon page-header__icon--basket' href='#'></a>
-				<a class='page-header__login' href='#'></a>
+				<img class='page-header__logo' src='img/img-logo.png' width='62' height='52' alt='logo'>
+				<div class='page-header__icons'>
+					<a class='page-header__icon page-header__icon--bell' href='#'><span class='page-header__num page-header__num--bell'>12</span></a>
+					<a class='page-header__icon page-header__icon--basket' href='#'><span class='page-header__num page-header__num--basket'>999 уп.</span></a>
+					<a class='page-header__icon page-header__icon--login' href='#'></a>
+				</div>
 				<nav class='main-nav'>
 					<ul class='main-nav__list'>
 						<li class='main-nav__item'><a href='#'>Пункт меню один</a></li>
@@ -26,7 +28,7 @@
 					<h1>Избранное (9)</h1>
 					<label class='filter__search'>
 						Поиск:
-						<input class='page-input' type='search' placeholder='Введите название сорта, вкус'>
+						<input class='page-input page-input--filter' type='search' placeholder='Введите название сорта, вкус'>
 					</label>
 					<div class='filter__sort'>
 						<span>по названию</span>
@@ -34,12 +36,16 @@
 						<a class='filter__type filter__type--rating' href='#'>по оценке</a>
 					</div>
 					<div class='filter__view tabs'>
-						<input type='radio' name='view' id='tab-first'>
-						<label for='tab-first' class='filter__view-option tabs__option'>Сокращенный вид</label>
-						<input type='radio' id='tab-second' name='view' checked>
-						<label for='tab-second' class='filter__view-option tabs__option'>Подробный вид</label>
-						<div class='products products--short'></div>
-						<div class='products products--details'>
+						<!-- <div class='tabs__toggles'> -->
+							<input type='radio' name='view' id='tab-first'>
+							<span class='tabs__radio tabs__radio--1' id='tab-1'></span>
+							<label for='tab-first' class='tabs__option tabs__option--short'>Сокращенный вид</label>
+							<input type='radio' id='tab-second' name='view' checked>
+							<span class='tabs__radio tabs__radio--2' id='tab-2'></span>
+							<label for='tab-second' class='tabs__option tabs__option--long'>Подробный вид</label>
+						<!-- </div> -->
+						<div class='products products--short' id='tab-content-1'>Очень сокращенный вид :)</div>
+						<div class='products products--details' id='tab-content-2'>
 							<div class='products__item products__item--special'>
 								<div class='products__header' id='special'>
 									<b>Специальные предложения</b>
@@ -106,7 +112,7 @@
 											</div>
 											<div class='products__howmuch'>
 												<a class='products__btn products__btn--minus'>-</a>
-												<input type='text' value='0' id='products-quantity-1'>
+												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-1'>
 												<a class='products__btn products__btn--plus'>+</a>
 											</div>
 										</div>
@@ -159,7 +165,7 @@
 											</div>
 											<div class='products__howmuch'>
 												<a class='products__btn products__btn--minus'>-</a>
-												<input type='text' value='0' id='products-quantity-2'>
+												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-2'>
 												<a class='products__btn products__btn--plus'>+</a>
 											</div>
 										</div>
@@ -212,7 +218,7 @@
 											</div>
 											<div class='products__howmuch'>
 												<a class='products__btn products__btn--minus'>-</a>
-												<input type='text' value='0' id='products-quantity-3'>
+												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-3'>
 												<a class='products__btn products__btn--plus'>+</a>
 											</div>
 										</div>
@@ -435,5 +441,6 @@
 				</section>
 			</main>
 		</div>
+		<script src='js/script.js'></script>
 	</body>
 </html>

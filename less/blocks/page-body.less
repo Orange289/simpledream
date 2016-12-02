@@ -1,0 +1,39 @@
+@font-face {
+	.font-setup(@font-fam, @font-1-local, @font-1-url1, @font-1-url2);
+  font-weight: 300;
+}
+@font-face {
+	.font-setup(@font-fam, @font-2-local, @font-2-url1, @font-2-url2);
+  font-weight: 500;
+}
+@font-face {
+	.font-setup(@font-fam, @font-3-local, @font-3-url1, @font-3-url2);
+  font-weight: 700;
+}
+@font-face {
+	.font-setup(@font-fam, @font-4-local, @font-4-url1, @font-4-url2);
+  font-weight: 400;
+}
+@font-face {
+	.font-setup(@font-fam, @font-5-local, @font-5-url1, @font-5-url2);
+	font-style: italic;
+}
+
+.page-body {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	.font-param(14px, 20px, 400);
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+
+	h1 {
+		font-family: 'Roboto', 'Arial', sans-serif;
+		.font-param(26px, 20px, 400);
+		margin: 0;
+	}
+
+}
