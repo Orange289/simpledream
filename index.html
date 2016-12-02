@@ -3,6 +3,7 @@
 	<head>
 		<meta charset='utf-8'>
 		<link rel='stylesheet' href='css/style.css'>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 		<title>SimpleDream-Test</title>
 	</head>
 	<body class='page-body'>
@@ -45,9 +46,10 @@
 						<div class='products products--short' id='tab-content-1'>Очень сокращенный вид :)</div>
 						<div class='products products--details' id='tab-content-2'>
 							<div class='products__item products__item--special'>
-								<div class='products__header' id='special'>
+								<div class='products__header products__border' id='special'>
 									<b>Специальные предложения</b>
 									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--special'></span>
 								</div>
 								<div class='products__content' id='special-content'>
 									<div class='container'>
@@ -100,9 +102,10 @@
 								</div>
 							</div>
 							<div class='products__item products__item--arabica'>
-								<div class='products__header' id='arabica'>
+								<div class='products__header products__border' id='arabica'>
 									<b>Арабика</b>
 									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--arabica'></span>
 								</div>
 								<div class='products__content' id='arabica-content'>
 									<div class='container'>
@@ -154,9 +157,9 @@
 												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
 											</div>
 											<div class='products__howmuch'>
-												<a class='products__btn products__btn--minus'>-</a>
+												<a class='products__btn products__btn--minus' href='#' id='minus-1'>-</a>
 												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-1'>
-												<a class='products__btn products__btn--plus'>+</a>
+												<a class='products__btn products__btn--plus' href='#' id='plus-1'>+</a>
 											</div>
 										</div>
 										<div class='products__goods products__goods--3'>
@@ -207,9 +210,9 @@
 												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
 											</div>
 											<div class='products__howmuch'>
-												<a class='products__btn products__btn--minus'>-</a>
+												<a class='products__btn products__btn--minus' id='minus-2'>-</a>
 												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-2'>
-												<a class='products__btn products__btn--plus'>+</a>
+												<a class='products__btn products__btn--plus' id='plus-2'>+</a>
 											</div>
 										</div>
 										<div class='products__goods products__goods--4'>
@@ -260,18 +263,19 @@
 												Cкидка: $ 0,20/кг<br>В корзине 5 уп на 600$
 											</div>
 											<div class='products__howmuch'>
-												<a class='products__btn products__btn--minus'>-</a>
+												<a class='products__btn products__btn--minus' id='minus-3'>-</a>
 												<input class='page-input page-input--products' type='text' value='0' id='products-quantity-3'>
-												<a class='products__btn products__btn--plus'>+</a>
+												<a class='products__btn products__btn--plus' id='plus-3'>+</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class='products__item products__item--robusta'>
-								<div class='products__header' id='robusta'>
+								<div class='products__header products__border' id='robusta'>
 									<b>Робуст</b>
 									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--robusta'></span>
 								</div>
 								<div class='products__content' id='robusta-content'>
 									<div class='container'>
@@ -323,12 +327,13 @@
 									</div>
 								</div>
 							</div>
-							<div class='products__item products__item--expected'>
-								<div class='products__header' id='expected'>
+							<div class='products__item products__item--mix'>
+								<div class='products__header products__border' id='mix'>
 									<b>Смеси</b>
 									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--mix'></span>
 								</div>
-								<div class='products__content' id='expected-content'>
+								<div class='products__content' id='mix-content'>
 									<div class='container'>
 										<div class='products__goods products__goods--6'>
 											<div class='products__title'>
@@ -375,6 +380,17 @@
 												</div>
 											</div>
 										</div>
+									</div>
+								</div>
+							</div>
+							<div class='products__item products__item--expected'>
+								<div class='products__header products__border' id='expected'>
+									<b>Ожидаются</b>
+									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--expected'></span>
+								</div>
+								<div class='products__content' id='expected-content'>
+									<div class='container'>
 										<div class='products__goods products__goods--7'>
 											<div class='products__title'>
 												<a class='products__name' href='#'><span>BojiKenya Natural AA/AB Highlands</span> <span>Endebess Estate</span></a>
@@ -465,16 +481,6 @@
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							<div class='products__item products__item--unavailable'>
-								<div class='products__header' id='unavailable'>
-									<b>Нет в наличии</b>
-									<span class='products__number'>(45)</span>
-								</div>
-								<div class='products__content' id='unavailable-content'>
-									<div class='container'>
 										<div class='products__goods products__goods--9'>
 											<div class='products__title'>
 												<a class='products__name' href='#'><span>BojiKenya Natural AA/AB Highlands</span> <span>Endebess Estate</span></a>
@@ -523,7 +529,64 @@
 									</div>
 								</div>
 							</div>
-							<a class='products__basket' href='#'></a>
+							<div class='products__item products__item--unavailable'>
+								<div class='products__header products__border' id='unavailable'>
+									<b>Нет в наличии</b>
+									<span class='products__number'>(45)</span>
+									<span class='products__arrow products__arrow--unavailable'></span>
+								</div>
+								<div class='products__content' id='unavailable-content'>
+									<div class='container'>
+										<div class='products__goods products__goods--10'>
+											<div class='products__title'>
+												<a class='products__name' href='#'><span>BojiKenya Natural AA/AB Highlands</span> <span>Endebess Estate</span></a>
+												<span class='products__num'>87</span>
+											</div>
+											<div class='products__icons'>
+												<a class='products__icon products__icon--star' href='#'></a>
+												<a class='products__icon products__icon--cup' href='#'></a>
+												<a class='products__icon products__icon--eye' href='#'></a>
+											</div>
+											<div class='products__options'>
+												<div class='products__option products__option--availability'>
+													<b>В наличии</b>
+													<span>100 уп. (+20 в резерве) х 60 кг</span>
+												</div>
+												<div class='products__option products__option--pack'>
+													<b>Упаковка</b>
+													<span>Грейн про</span>
+												</div>
+												<div class='products__option products__option--screen'>
+													<b>Скрин</b>
+													<span>16/17</span>
+												</div>
+												<div class='products__option products__option--processing'>
+													<b>Обработка</b>
+													<span>Washed</span>
+												</div>
+												<div class='products__option products__option--harvest'>
+													<b>Урожай</b>
+													<span>2015/16</span>
+												</div>
+												<div class='products__option products__option--vendor'>
+													<b>Поставщик</b>
+													<span>Bargesh</span>
+												</div>
+												<div class='products__option products__option--price-1'>
+													<b>Цена за кг</b>
+													<span>$200</span>
+												</div>
+												<div class='products__option products__option--price-2'>
+													<b>Цена за кг</b>
+													<span>$5500</span>
+												</div>
+												<span class='products__text-red'>Нет в наличии</span>
+											</div>
+										</div>
+									</div>
+									<a class='products__basket' href='#'>99 уп.</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>

@@ -4,14 +4,36 @@
 }
 
 .products__header {
-	padding-top: 13px;
-	padding-bottom: 13px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	padding-left: 15px;
-	border-bottom: 1px solid #c3c3c3;
 	cursor: pointer;
+	position: relative;
 
 	b {
 		.font-param(18px, 20px, 400);
+	}
+
+}
+
+.products__border {
+	border-bottom: 1px solid #c3c3c3;
+}
+
+.products__arrow {
+	position: absolute;
+	display: block;
+	top: 14px;
+	left: 288px;
+	.size(8px);
+	border-bottom: 2px solid #000000;
+	border-right: 2px solid #000000;
+	transform: rotate(45deg);
+	cursor: pointer;
+
+	&--open {
+		transform: rotate(-135deg);
+		top: 18px;
 	}
 
 }
@@ -43,6 +65,214 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	.size(22px, 25px);
+	.size(22px, 23px);
+	font-weight: 700;
+	line-height: 26px;
+	background-color: #f9ff60;
 
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -13px;
+		.size(0);
+		border-style: solid;
+		border-width: 12px 14px 12px 0;
+		border-color: transparent #f9ff60 transparent transparent;
+	}
+
+}
+
+.products__icons {
+	margin-top: 13px;
+}
+
+.products__icon {
+	display: inline-block;
+	background: url('../img/sprite.png') no-repeat;
+	margin-right: 8px;
+	.size(25px);
+
+	&--star {
+		background-position: -5px -335px;
+	}
+
+	&--cup {
+		background-position: -5px -211px;
+	}
+
+	&--eye {
+		background-position: -5px -253px;
+	}
+
+}
+
+.products__goods {
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.products__goods--2 .products__icon {
+	background-color: #57c33f;
+	border-radius: 50%;
+
+	&--star {
+		background-position: 1px -351px;
+	}
+
+	&--cup {
+		background-position: 2px -229px;
+	}
+
+	&--eye {
+		background-position: 0px -266px;
+	}
+
+}
+
+.products__option {
+	position: relative;
+
+	span {
+		position: absolute;
+		left: 85px;
+	}
+
+}
+
+.products__discount {
+	line-height: 17px;
+	font-style: italic;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.products__howmuch {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+
+.products__btn {
+	font-size: 0;
+	display: inline-block;
+	position: relative;
+	.size(25px);
+	cursor: pointer;
+
+	&--minus::before {
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 0px;
+		.size(12px, 3px);
+		background-color: #000000;
+	}
+
+	&--plus::before {
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 14px;
+		.size(12px, 3px);
+		background-color: #000000;
+	}
+
+	&--plus::after {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 18px;
+		.size(3px, 12px);
+		background-color: #000000;
+	}
+
+}
+
+.products__goods--2 {
+
+	.products__howmuch {
+		margin-left: 15px;
+	}
+
+	.products__btn {
+		border-radius: 50%;
+		vertical-align: top;
+		margin-top: -5px;
+
+		&--minus {
+			background-color: #fe5350;
+			margin-right: 5px;
+		}
+
+		&--plus {
+			background-color: #57c33f;
+			margin-left: 5px;
+		}
+
+		&--minus::before,
+		&--plus::before,
+		&--plus::after {
+			background-color: #ffffff;
+		}
+
+		&--minus::before,
+		&--plus::before {
+			top: 10px;
+			left: 6px;
+		}
+
+		&--plus::after {
+			top: 6px;
+			left: 10px;
+		}
+
+	}
+
+}
+
+@keyframes downhill {
+	0% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.products__content {
+	display: none;
+	position: relative;
+}
+
+.products__show {
+	display: block;
+	animation: downhill 400ms;
+}
+
+.products__basket {
+	position: absolute;
+	top: 250px;
+	left: 233px;
+	.font-param(14px, 45px, 700, #ffffff);
+	text-align: center;
+	.size(66px);
+	border-radius: 50%;
+	box-shadow: 0 3px 6px 0 #cfcfcf;
+	background-color: #ff5607;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 33px;
+		left: 17px;
+		background: url('../img/sprite.png') no-repeat;
+		.size(28px, 24px);
+		background-position: -5px -41px;
+	}
+
+}
+
+.products__text-red {
+	color: #fe5350;
 }
