@@ -18,6 +18,15 @@ var robusta_content = document.getElementById('robusta-content');
 var mix_content = document.getElementById('mix-content');
 var expected_content = document.getElementById('expected-content');
 var unavailable_content = document.getElementById('unavailable-content');
+var minus_1 = document.getElementById('minus-1');
+var minus_2 = document.getElementById('minus-2');
+var minus_3 = document.getElementById('minus-3');
+var plus_1 = document.getElementById('plus-1');
+var plus_2 = document.getElementById('plus-2');
+var plus_3 = document.getElementById('plus-3');
+var input_1 = document.getElementById('products-quantity-1');
+var input_2 = document.getElementById('products-quantity-2');
+var input_3 = document.getElementById('products-quantity-3');
 
 
 menu_toggle.addEventListener('click', function(event){
@@ -103,3 +112,44 @@ unavailable_header.addEventListener('click', function(event) {
 	unavailable_content.classList.toggle('products__show');
 	unavailable_header.classList.toggle('products__border');
 });
+
+minus_1.onclick = function(){
+	if(parseInt(input_1.value) >= 1) {
+		input_1.value = parseInt(input_1.value)-1;
+	}
+}
+plus_1.onclick = function(){
+    input_1.value = parseInt(input_1.value)+1;
+};
+
+minus_2.onclick = function(){
+	if(parseInt(input_2.value) >= 1) {
+		input_2.value = parseInt(input_2.value)-1;
+	}
+}
+plus_2.onclick = function(){
+    input_2.value = parseInt(input_2.value)+1;
+};
+
+minus_3.onclick = function(){
+	if(parseInt(input_3.value) >= 1) {
+		input_3.value = parseInt(input_3.value)-1;
+	}
+}
+plus_3.onclick = function(){
+    input_3.value = parseInt(input_3.value)+1;
+};
+
+$('.page-input--products').keypress(function(event){
+		var key, keyChar;
+		if(!event) var event = window.event;
+
+		if (event.keyCode) key = event.keyCode;
+		else if(event.which) key = event.which;
+
+		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+		keyChar=String.fromCharCode(key);
+
+		if(!/\d/.test(keyChar))	return false;
+
+	});

@@ -69,12 +69,14 @@
   box-shadow: 0 6px 16px -3px #d8d8d8;
 }
 .page-header__logo {
-  width: 62px;
-  height: 52px;
   display: inline-block;
   vertical-align: top;
   padding-left: 58px;
   padding-bottom: 5px;
+}
+.page-header__logo img {
+  width: 62px;
+  height: 52px;
 }
 .page-header__btn {
   width: 24px;
@@ -234,6 +236,7 @@
   width: 53px;
   height: 17px;
   display: inline-block;
+  padding-bottom: 3px;
   text-align: center;
 }
 .tabs {
